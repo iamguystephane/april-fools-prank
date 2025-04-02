@@ -1,0 +1,66 @@
+.circle {
+  animation: bouncing 2s ease-in-out infinite;
+  transition: all 360ms ease-in-out;
+}
+
+@keyframes bouncing {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.card {
+  animation: tilt 10s ease-in-out infinite;
+  transition: all 360ms ease-in-out;
+}
+
+@keyframes tilt {
+  0%,
+  20% {
+    transform: rotate(0deg);
+  } /* Start & pause at center */
+  30%,
+  40% {
+    transform: rotate(-8deg);
+  } /* Tilt left & pause */
+  50%,
+  60% {
+    transform: rotate(0deg);
+  } /* Back to center & pause */
+  70%,
+  80% {
+    transform: rotate(8deg);
+  } /* Tilt right & pause */
+  90%,
+  100% {
+    transform: rotate(0deg);
+  } /* Back to center & pause */
+}
+
+.star {
+  animation: twinkle 10s ease-in-out infinite;
+  transition: all 360ms ease-in-out;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  } /* Full brightness */
+  50% {
+    opacity: 0.3;
+    transform: scale(1.2);
+    color: gold;
+  } /* Dim and slightly enlarge */
+}
